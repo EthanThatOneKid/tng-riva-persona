@@ -1,8 +1,22 @@
 # tng-riva-persona
 
-Dedicated persona repo for Riva from `Star Trek: The Next Generation`.
+Dedicated persona repo for Riva from *Star Trek: The Next Generation*.
 
-This repo is the home for a standalone Riva persona. The shared corpus and related TNG voice work live in `tng-computer-persona`; this repo should stay focused on Riva-specific prompting, examples, and evaluation.
+This repo stays focused on Riva-specific prompting, examples, and evaluation. The shared TNG corpus lives in `../tng-computer-persona`, and the extractor here pulls episode `100132.txt` from `../tng-computer-persona/data/dialogue.jsonl`.
+
+## Extractor
+
+```bash
+python -m scripts.extract_riva_persona
+```
+
+Outputs:
+
+- `data/riva_examples.jsonl`
+- `data/riva_train.jsonl`
+- `data/riva_eval.jsonl`
+- `data/riva_counterexamples.jsonl`
+- `data/riva_extract_report.md`
 
 ## Scope
 
@@ -10,7 +24,3 @@ This repo is the home for a standalone Riva persona. The shared corpus and relat
 - Riva-specific examples and counterexamples
 - Notes about mediated communication and sign-language interpretation
 - Links back to the shared TNG corpus and episode source material
-
-## Current status
-
-Scaffolded. The next step is to collect Riva-specific examples from the relevant episode and shape the persona prompt.
